@@ -1,8 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  /* font-family: 'Raleway', sans-serif; */
-  color: #434455;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 a {
@@ -22,7 +19,7 @@ img {
   height: auto;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -30,7 +27,7 @@ h5,
 h6,
 p {
   margin: 0;
-}
+} */
 
 /* .visually-hidden {
   position: absolute;
@@ -47,15 +44,33 @@ p {
 
 .container {
   width: 100%; */
-  /*! max-width: 1158px; */
-  /* max-width: 320px; */
-  /*! padding: 0 15px; */
-  /* padding: 0 16px; */
-  /* margin: 0 auto; */
+/*! max-width: 1158px; */
+/* max-width: 320px; */
+/*! padding: 0 15px; */
+/* padding: 0 16px; */
+/* margin: 0 auto; */
 /* } */
 
 /* .section { */
-  /*! padding: 120px 0; */
-  /* padding: 96px 0; */
+/*! padding: 120px 0; */
+/* padding: 96px 0; */
 /* } */
 
+/** =============== Gallery styles ===============  */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px 24px;
+  max-width: 1128px;
+  margin: 50px auto;
+}
+.gallery-item {
+  max-width: 360px;
+}
+.gallery-link {
+}
+.gallery-image {
+  object-fit: cover;
+}
