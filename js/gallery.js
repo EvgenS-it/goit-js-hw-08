@@ -69,14 +69,23 @@ galleryList.addEventListener("click", (event) => {
   event.preventDefault();
   
   if (event.target === event.currentTarget) return;
-  console.log(event.target.dataset.soure);
-  
+  const largeImgSrc = event.target.dataset.soure;
+  // const largeImgSrc = event.target.closest(".gallery-link");
+  // console.log(largeImgSrc.getAttribute("href"));
+
+  const modal = basicLightbox.create(`
+	<div class="modal">
+  <img data-soure="${largeImgSrc}" class="modal" src="${largeImgSrc}" alt="${event.target.getAttribute("alt")}">
+  </div>
+`)
+  modal.show();
 });
+
 
 const elements = images.map(image => {
   const listItem = document.createElement("li");
   listItem.classList.add("gallery-item");
-  
+
   const itemLink = document.createElement("a");
   itemLink.classList.add("gallery-link");
   itemLink.href = image.original;
@@ -93,5 +102,8 @@ const elements = images.map(image => {
 });
 
 galleryList.append(...elements);
+
+
+
 
 
