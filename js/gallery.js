@@ -66,9 +66,11 @@ const images = [
 
 const galleryList = document.querySelector(".gallery");
 galleryList.addEventListener("click", (event) => {
-  if (event.target.nodeName === "A" || event.target.nodeName === "IMG") {
-    event.preventDefault();
-  }
+  event.preventDefault();
+  
+  if (event.target === event.currentTarget) return;
+  console.log(event.target.dataset.soure);
+  
 });
 
 const elements = images.map(image => {
@@ -91,3 +93,5 @@ const elements = images.map(image => {
 });
 
 galleryList.append(...elements);
+
+
